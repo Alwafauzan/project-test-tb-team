@@ -2,14 +2,14 @@
 
 ## setup
 
-- buka folder data_fix, di sana ada 10 data sensor PPG yang bisa kalian
+- buka folder "data_fix", di sana ada 10 data sensor PPG yang bisa kalian
   olah. Setiap file memiliki tingkat kecemasan berbeda seperti gambar di bawah ini
 
   ![gambar](./gambar/label.png)
 
   tingkat kecemasan nantinya akan kita gunakan untuk train machine learning (y_train).
 
-- ada 3 column yang harus diperhatikan (Index, Data_PPG, dan Waktu(detik))
+- buka salah satu file csv, ada 3 column yang harus diperhatikan (Index, Data_PPG, dan Waktu(detik))
   ![gambar](./gambar/contoh_data_ppg.png)
 - read 10 data tersebut menggunakan library pandas, atau library manapun yang kalian mau
 - buat sendiri nama columnnya agar lebih mudah mengolah datanya
@@ -18,6 +18,7 @@
 
 - lakukan preprocessing data PPG seperti yang kalian kuasai, setiap orang setidaknya memiliki 1 cara preprocessing data PPG yang berbeda dengan orang lain (boleh pakai bandpass filter, butterworth, highpass filter, dll)
 - disarankan untuk melakukan windowing data PPG agar data train kalian nanti menjadi banyak
+
   ini contoh kodenya :
 
 ```python
@@ -38,7 +39,7 @@ for no_segmen in range(0,len(label)):
 
 ## fitur
 
-- cari setidaknya 2 fitur per orang (sama gapapa deh, soalnya susah nyari jurnalnya)
+- cari setidaknya 2 fitur per orang (kalo mau sama gapapa deh, soalnya susah nyari jurnalnya)
 - olah datanya berdasarkan fitur yang kalian tau
   dari data seperti ini ![gambar](./gambar/contoh_data_ppg.png)
   menjadi seperti ini (contoh yang saya berikan miliki 9 fitur) ![gambar](./gambar/hasil_pengolahan_fitur.png)
